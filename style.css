@@ -27,7 +27,7 @@ a:hover {
     background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
 }
 
-/** Mes modifications en cours ajoutées ( Et non pas modifiées ) **/
+/** Mes modifications en cours **/
 
 .flex-center {
     display: flex;
@@ -84,11 +84,27 @@ footer a {
     font-size: 18px;
 }
 
+.list {
+    list-style: none;
+    padding-left: 0px;
+}
+
 li > a {
     color: #000000;
     font-size: 18px;
 }
 
+footer h4 {
+    font-size: 21px;
+    padding-left: 0px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+footer h3 {
+    color: #000000!important;
+    font-size: 15px;
+}
 
 .font-size16 {
     font-size: 16px;
@@ -868,7 +884,7 @@ h4 {
 }
 
 .btn-atomic-tangerine-b {
-    background: #F3976C;
+    background-color: #F3976C;
     color: #000000!important;
 }
 
@@ -903,11 +919,12 @@ h4 {
 }
 
 .bg-banniere {
-    background-image: url("img/agence-la-panthere.jpg"); 
+    background-image: url("img/agence-la-panthere.jpg");
+    background-size: cover;   
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.jpg");
+    background-image: url("img/image-de-presentation.bmp");
 }
 
 @media (max-width: 1024px) {
@@ -931,18 +948,15 @@ h4 {
     .nav-center.navbar .nav {
         max-width: 100%
     }
-    .auteur_commentaire {
-        text-align: center;
-    }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -960,6 +974,10 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
+    .bloc {
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
+    }
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -968,9 +986,8 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-    }
-    .auteur_commentaire {
-        text-align: center;
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
     }
 }
 
@@ -1110,27 +1127,17 @@ h4 {
         width: 180px;
         height: 320px;
     }
-    .auteur_commentaire {
-        text-align: center;
-    }
 }
 
 @media (max-width: 400px) {
     .bloc {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-    .auteur_commentaire {
-        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
 @media (max-width: 767px) {
     .bloc-mob-center-text {
         text-align: center;
-    }
-    .flex-center {
-        display: flex;
-        flex-direction: column;
     }
 }
