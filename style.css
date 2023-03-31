@@ -735,6 +735,7 @@ label,
 img.img-responsive.portfolio-thumb {
     max-width: 320px;
     width: 100%;
+    height: 100%
 }
 
 .container {
